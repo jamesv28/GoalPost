@@ -16,11 +16,11 @@ class GoalCell: UITableViewCell {
     
     @IBOutlet weak var timeInvolvementNumber: UILabel!
     
-    func configureCell(description: String, type: String, goalProgressAmt: Int) {
+    func configureCell(description: String, type: GoalType, goalProgressAmt: Int) {
         
         self.goalDescriptionLabel.text = description
-        self.timeDescriptionLabel.text = type
-        self.timeDescriptionLabel.text = String(describing: goalProgressAmt)
+        self.timeDescriptionLabel.text = type.rawValue
+        self.timeInvolvementNumber.text = String(describing: goalProgressAmt)
         
     }
 }
