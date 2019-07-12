@@ -25,7 +25,8 @@ class MaterialButton: UIButton {
         layer.borderWidth = 2
         
         setTitleColor(#colorLiteral(red: 0.262745098, green: 0.8039215686, blue: 0.5019607843, alpha: 1), for: .normal)
-        backgroundColor = #colorLiteral(red: 0.9182453156, green: 0.9182668328, blue: 0.9182552695, alpha: 1)
+        setTitleColor(#colorLiteral(red: 0.262745098, green: 0.8039215686, blue: 0.5019607843, alpha: 1), for: .selected)
+        self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         layer.shadowColor = #colorLiteral(red: 0.6536212564, green: 0.6536368728, blue: 0.6536284685, alpha: 1)
         layer.shadowOffset = CGSize(width: 0.0, height: 6.0)
