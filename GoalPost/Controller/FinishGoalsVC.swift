@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FinishGoalsVC: UIViewController, UITextFieldDelegate {
 
@@ -36,5 +37,13 @@ class FinishGoalsVC: UIViewController, UITextFieldDelegate {
         
     }
     
-    
+    func save(completion: (_ finished: Bool) -> () ) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        let goal = Goal(context: managedContext)
+        
+        goal.goalDescription = goalDescription
+        goal.goalType = goalType.map { $0.rawValue }
+        goal.goalDescriptionValue = Int32(pointsTextField.text!)!
+        
+    }
 }
