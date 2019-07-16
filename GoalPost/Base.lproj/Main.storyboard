@@ -402,35 +402,42 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSh-yY-wI9" customClass="MaterialButton" customModule="GoalPost" customModuleProvider="target">
-                                <rect key="frame" x="20" y="812" width="374" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="lyC-iX-ghN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                <state key="normal" title="CREATE GOAL"/>
-                                <connections>
-                                    <action selector="createGoalPressed:" destination="0F1-ML-EGF" eventType="touchUpInside" id="Xk8-1A-XmZ"/>
-                                    <action selector="nextBtnPressed:" destination="xYI-h7-OlU" eventType="touchUpInside" id="KUj-UJ-YyR"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7U-VT-hdj">
-                                <rect key="frame" x="0.0" y="228" width="414" height="576"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7U-VT-hdj">
+                                <rect key="frame" x="0.0" y="228" width="414" height="668"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSh-yY-wI9" customClass="MaterialButton" customModule="GoalPost" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="578" width="384" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="lyC-iX-ghN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                        <state key="normal" title="CREATE GOAL"/>
+                                        <connections>
+                                            <action selector="createGoalPressed:" destination="0F1-ML-EGF" eventType="touchUpInside" id="Xk8-1A-XmZ"/>
+                                            <action selector="nextBtnPressed:" destination="xYI-h7-OlU" eventType="touchUpInside" id="KUj-UJ-YyR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RSh-yY-wI9" secondAttribute="bottom" constant="40" id="1yN-rU-8hD"/>
+                                    <constraint firstAttribute="trailing" secondItem="RSh-yY-wI9" secondAttribute="trailing" constant="15" id="OaI-4a-kA4"/>
+                                    <constraint firstItem="RSh-yY-wI9" firstAttribute="leading" secondItem="K7U-VT-hdj" secondAttribute="leading" constant="15" id="rAJ-gv-CVI"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Jvq-PF-BdJ" firstAttribute="leading" secondItem="mTA-Jz-TB6" secondAttribute="leading" id="4Gy-Tq-haz"/>
                             <constraint firstItem="I6x-U1-5Jl" firstAttribute="top" secondItem="Jvq-PF-BdJ" secondAttribute="bottom" constant="20" id="5ey-oK-k1Z"/>
-                            <constraint firstItem="RSh-yY-wI9" firstAttribute="leading" secondItem="mTA-Jz-TB6" secondAttribute="leading" constant="20" id="6Ff-Zf-gtQ"/>
+                            <constraint firstItem="K7U-VT-hdj" firstAttribute="trailing" secondItem="mTA-Jz-TB6" secondAttribute="trailing" id="Dgw-qQ-vkd"/>
+                            <constraint firstItem="K7U-VT-hdj" firstAttribute="top" secondItem="I6x-U1-5Jl" secondAttribute="bottom" constant="8" id="LuN-Jv-KLU"/>
                             <constraint firstItem="mTA-Jz-TB6" firstAttribute="trailing" secondItem="I6x-U1-5Jl" secondAttribute="trailing" constant="20" id="PZT-sl-6Ab"/>
                             <constraint firstItem="Jvq-PF-BdJ" firstAttribute="top" secondItem="JdS-3b-89N" secondAttribute="top" id="aP9-7S-mcq"/>
-                            <constraint firstItem="RSh-yY-wI9" firstAttribute="bottom" secondItem="mTA-Jz-TB6" secondAttribute="bottom" id="bCP-RC-2XB"/>
+                            <constraint firstAttribute="bottom" secondItem="K7U-VT-hdj" secondAttribute="bottom" id="hEq-gg-FXV"/>
                             <constraint firstItem="Jvq-PF-BdJ" firstAttribute="trailing" secondItem="mTA-Jz-TB6" secondAttribute="trailing" id="sKX-Ow-fsP"/>
-                            <constraint firstItem="mTA-Jz-TB6" firstAttribute="trailing" secondItem="RSh-yY-wI9" secondAttribute="trailing" constant="20" id="uPv-Ah-GZS"/>
                             <constraint firstItem="I6x-U1-5Jl" firstAttribute="leading" secondItem="mTA-Jz-TB6" secondAttribute="leading" constant="20" id="urH-GF-4nf"/>
+                            <constraint firstItem="K7U-VT-hdj" firstAttribute="leading" secondItem="mTA-Jz-TB6" secondAttribute="leading" id="vgf-eu-0Ug"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mTA-Jz-TB6"/>
                     </view>
