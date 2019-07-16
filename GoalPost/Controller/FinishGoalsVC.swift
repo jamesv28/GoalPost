@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FinishGoalsVC: UIViewController {
+class FinishGoalsVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var createGoalBtn: MaterialButton!
     @IBOutlet weak var pointsTextField: UITextField!
@@ -18,6 +18,7 @@ class FinishGoalsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createGoalBtn.bindToKeyboard()
+        pointsTextField.delegate = self
        
     }
     
@@ -26,9 +27,14 @@ class FinishGoalsVC: UIViewController {
         self.goalType = goalType
     }
     
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismissDetail()
+    }
+    
     @IBAction func createGoalPressed(_ sender: Any) {
         // pass data into core data
         
     }
+    
     
 }
