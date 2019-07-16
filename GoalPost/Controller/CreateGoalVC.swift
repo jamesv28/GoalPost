@@ -22,13 +22,17 @@ class CreateGoalVC: UIViewController {
         nextBtn.bindToKeyboard()
         shortTermBtn.setSelectedColor()
         longTermBtn.deselectColor()
-        
-        // Do any additional setup after loading the view.
     }
     
 
     @IBAction func nextBtnPressed(_ sender: Any) {
+        if goalTextView.text != "" && goalTextView.text != "What is your goal?" {
+            guard let finishGoalVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalsVC") as? FinishGoalsVC else { return }
+            finishGoalVC.initData(description: goalTextView.text!, goalType: goalType)
+            presentDetail(finishGoalVC)
+        }
     }
+    
     @IBAction func shortBtnPressed(_ sender: Any) {
         goalType = .shortTerm
         shortTermBtn.setSelectedColor()
@@ -42,7 +46,6 @@ class CreateGoalVC: UIViewController {
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {
-    
         // go back to GoalVC
         dismissDetail()
     }

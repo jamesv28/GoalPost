@@ -19,6 +19,8 @@
 		AA58CBFA22D9220100650036 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA58CBF922D9220100650036 /* UIViewControllerExt.swift */; };
 		AA58CBFC22DA997F00650036 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA58CBFB22DA997F00650036 /* UIViewExt.swift */; };
 		AA6F51FE22DBF55C004F1313 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F51FD22DBF55C004F1313 /* UIButtonExt.swift */; };
+		AA6F520022DD4EA1004F1313 /* FinishGoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F51FF22DD4EA1004F1313 /* FinishGoalsVC.swift */; };
+		AA6F520222DD5465004F1313 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F520122DD5465004F1313 /* MaterialTextField.swift */; };
 		AAA48CB022D7EBA700BC8C13 /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA48CAF22D7EBA700BC8C13 /* GoalType.swift */; };
 		AAA48CB222D7FA2000BC8C13 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA48CB122D7FA2000BC8C13 /* MaterialButton.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,8 @@
 		AA58CBF922D9220100650036 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		AA58CBFB22DA997F00650036 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		AA6F51FD22DBF55C004F1313 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		AA6F51FF22DD4EA1004F1313 /* FinishGoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGoalsVC.swift; sourceTree = "<group>"; };
+		AA6F520122DD5465004F1313 /* MaterialTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		AAA48CAF22D7EBA700BC8C13 /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
 		AAA48CB122D7FA2000BC8C13 /* MaterialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +104,7 @@
 				AA16448822D55B8300152D17 /* GoalCell.swift */,
 				AAA48CB122D7FA2000BC8C13 /* MaterialButton.swift */,
 				AA58CBF722D8123600650036 /* MaterialText.swift */,
+				AA6F520122DD5465004F1313 /* MaterialTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 			children = (
 				AA16447022D3F5A900152D17 /* GoalsVC.swift */,
 				AA58CBF522D809F100650036 /* CreateGoalVC.swift */,
+				AA6F51FF22DD4EA1004F1313 /* FinishGoalsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			files = (
 				AA6F51FE22DBF55C004F1313 /* UIButtonExt.swift in Sources */,
 				AA16448922D55B8300152D17 /* GoalCell.swift in Sources */,
+				AA6F520022DD4EA1004F1313 /* FinishGoalsVC.swift in Sources */,
 				AA58CBF822D8123600650036 /* MaterialText.swift in Sources */,
 				AA58CBFC22DA997F00650036 /* UIViewExt.swift in Sources */,
 				AA58CBFA22D9220100650036 /* UIViewControllerExt.swift in Sources */,
@@ -211,6 +218,7 @@
 				AAA48CB222D7FA2000BC8C13 /* MaterialButton.swift in Sources */,
 				AA16447122D3F5A900152D17 /* GoalsVC.swift in Sources */,
 				AA58CBF622D809F100650036 /* CreateGoalVC.swift in Sources */,
+				AA6F520222DD5465004F1313 /* MaterialTextField.swift in Sources */,
 				AA16446F22D3F5A900152D17 /* AppDelegate.swift in Sources */,
 				AA16447722D3F5AA00152D17 /* GoalPost.xcdatamodeld in Sources */,
 			);
