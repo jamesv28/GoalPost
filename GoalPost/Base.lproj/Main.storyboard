@@ -145,6 +145,22 @@
                                                     <color key="textColor" red="0.12156862745098039" green="0.51764705882352935" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFq-Xc-ggg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="69.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bv-NO-vdm">
+                                                            <rect key="frame" x="92.5" y="14.5" width="229.5" height="41"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.92941176470588238" green="0.56862745098039214" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="5bv-NO-vdm" firstAttribute="centerY" secondItem="JFq-Xc-ggg" secondAttribute="centerY" id="1eN-g3-gqH"/>
+                                                        <constraint firstItem="5bv-NO-vdm" firstAttribute="centerX" secondItem="JFq-Xc-ggg" secondAttribute="centerX" id="JZP-hz-ULb"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="JFq-Xc-ggg" secondAttribute="trailing" id="0Mg-8Q-Z4s"/>
