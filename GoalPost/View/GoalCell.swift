@@ -15,12 +15,20 @@ class GoalCell: UITableViewCell {
     @IBOutlet weak var timeDescriptionLabel: UILabel!
     
     @IBOutlet weak var timeInvolvementNumber: UILabel!
+    @IBOutlet weak var completionView: UIView!
     
-    func configureCell(description: String, type: GoalType, goalProgressAmt: Int) {
+    func configureCell(goal: Goal) {
         
-        self.goalDescriptionLabel.text = description
-        self.timeDescriptionLabel.text = type.rawValue
-        self.timeInvolvementNumber.text = String(describing: goalProgressAmt)
+        self.goalDescriptionLabel.text = goal.goalDescription
+        self.timeDescriptionLabel.text = goal.goalType
+        self.timeInvolvementNumber.text = String(describing: goal.goalProgress)
+        
+        if goal.goalProgress == goal.goalDescriptionValue {
+            self.completionView.isHidden = false
+        }
+        else {
+            self.completionView.isHidden = true
+        }
         
     }
 }

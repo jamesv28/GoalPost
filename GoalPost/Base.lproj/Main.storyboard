@@ -147,16 +147,21 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="JFq-Xc-ggg" secondAttribute="trailing" id="0Mg-8Q-Z4s"/>
                                                 <constraint firstItem="3l8-pl-iXq" firstAttribute="top" secondItem="dUz-4X-gq2" secondAttribute="topMargin" constant="8" id="0tr-nQ-ZcU"/>
+                                                <constraint firstAttribute="bottom" secondItem="JFq-Xc-ggg" secondAttribute="bottom" id="2u7-gB-OfB"/>
                                                 <constraint firstItem="d0Y-kC-QlU" firstAttribute="top" secondItem="dUz-4X-gq2" secondAttribute="top" constant="8" id="AUu-Pk-V9L"/>
+                                                <constraint firstItem="JFq-Xc-ggg" firstAttribute="leading" secondItem="dUz-4X-gq2" secondAttribute="leading" id="CCe-64-cea"/>
                                                 <constraint firstItem="3l8-pl-iXq" firstAttribute="bottom" secondItem="dUz-4X-gq2" secondAttribute="bottomMargin" constant="8" id="PTu-4n-sLC"/>
                                                 <constraint firstItem="3l8-pl-iXq" firstAttribute="leading" secondItem="d0Y-kC-QlU" secondAttribute="trailing" constant="10" id="R36-0N-rRk"/>
                                                 <constraint firstAttribute="bottom" secondItem="d0Y-kC-QlU" secondAttribute="bottom" constant="8" id="YuA-fW-eK4"/>
                                                 <constraint firstItem="d0Y-kC-QlU" firstAttribute="leading" secondItem="dUz-4X-gq2" secondAttribute="leading" constant="8" id="YxD-eX-G8s"/>
+                                                <constraint firstItem="JFq-Xc-ggg" firstAttribute="top" secondItem="dUz-4X-gq2" secondAttribute="top" id="ozw-L1-pIf"/>
                                                 <constraint firstItem="3l8-pl-iXq" firstAttribute="trailing" secondItem="dUz-4X-gq2" secondAttribute="trailingMargin" id="wcr-RI-XX4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="completionView" destination="JFq-Xc-ggg" id="Ebh-QE-mZp"/>
                                             <outlet property="goalDescriptionLabel" destination="alP-V3-grw" id="Ndq-Pp-V6q"/>
                                             <outlet property="timeDescriptionLabel" destination="af7-ST-ReG" id="gR2-gk-JDU"/>
                                             <outlet property="timeInvolvementNumber" destination="3l8-pl-iXq" id="A3q-ow-9Hu"/>

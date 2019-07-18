@@ -33,7 +33,6 @@ class GoalsVC: UIViewController {
         super.viewWillAppear(animated)
         fetchCoreDataObjects()
         tableView.reloadData()
-        print("success reappear")
     }
 
     func fetchCoreDataObjects() {
@@ -63,7 +62,7 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "goalCell" ) as? GoalCell else { return UITableViewCell() }
         let goal = goals[indexPath.row]
         
-        cell.configureCell(description: goal.goalDescription!, type: GoalType(rawValue: goal.goalType!)!, goalProgressAmt: Int(goal.goalProgress))
+        cell.configureCell(goal: goal)
         return cell
     }
     
@@ -77,18 +76,46 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
             self.removeGoal(ofIndexPath: indexPath)
             self.fetchCoreDataObjects()
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+        
+        let addAction = UITableViewRowAction(style: .normal, title: "ADD 1") { (rowAction, indexPath) in
+            self.progressForGoal(atIndexPath: indexPath)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        
+        addAction.backgroundColor = #colorLiteral(red: 0.5411764706, green: 0.168627451, blue: 0.8862745098, alpha: 1)
         deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.4117647059, blue: 0.3803921569, alpha: 1)
         
-        return [deleteAction]
+        return [deleteAction, addAction]
     }
 }
 
 extension GoalsVC {
+    
+    func progressForGoal(atIndexPath indexPath: IndexPath) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let chosenGoal = goals[indexPath.row]
+        
+        if chosenGoal.goalProgress < chosenGoal.goalDescriptionValue {
+            chosenGoal.goalProgress = chosenGoal.goalProgress + 1
+        } else {
+            return
+        }
+        
+        do {
+            try managedContext.save()
+            print("progress successfully saved")
+        }
+        catch {
+            debugPrint("progress not updated \(error.localizedDescription)")
+        }
+    }
     
     func removeGoal(ofIndexPath indexPath: IndexPath) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
@@ -97,7 +124,6 @@ extension GoalsVC {
         
         do {
             try managedContext.save()
-            print("Successfully removed goal!")
         } catch {
             debugPrint("Could not remove: \(error.localizedDescription)")
         }
@@ -110,7 +136,6 @@ extension GoalsVC {
         do {
             // explicitly casting this as a goals array below see if this works
             goals = try managedContext.fetch(fetchRequest)
-            print("success bitches")
             completion(true)
         }
         catch {
